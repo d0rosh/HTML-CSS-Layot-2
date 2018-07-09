@@ -1,0 +1,353 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.top-block
+		.nav-block
+			nav
+				ul
+					li
+						padding: 6px 8px!important
+						ul
+							top: 25px
+	header
+		#big-slider
+			.item
+				p
+					font-size: 52px
+		.sub-slogan
+			span
+				font-size: 20px
+			button
+				padding: 9px 21px
+				font-size: 14px
+	.content
+		.article-container
+			.article-box
+				p
+					margin-top: 40px
+		.testimonials
+			.human-container
+				.human-box
+					.wrap-photo
+						.human-position
+						.human-name
+							height: 37%
+		.about-chiller
+			.about-container
+				.chat-tabs
+					.tabs
+						ul
+							li
+								margin-right: 17px
+		.order-now
+			.order-container
+				.text-block
+					.left-text
+						font-size: 61px
+			.order-info
+				button
+					width: 150px
+					height: 36px
+					line-height: 21px
+					font-size: 15px
+				span
+					font-size: 19px
+					line-height: 39px
+	footer
+		span
+			margin-left: 0px
+		ul
+			li
+				display: block
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.top-block
+		.distribut-block
+			.distribut-info
+				span
+					&:nth-child(1)
+						display: none
+		.nav-block
+			padding: 0 20px
+			nav
+				display: none
+				position: fixed
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				min-height: 320px
+				background: rgba(0,0,0,0.9)
+				ul
+					padding-top: 115px
+					box-sizing: border-box
+					li
+						width: 100%
+						display: block
+						height: auto
+						padding: 10px 0!important
+						border-radius: 0
+						&:hover
+							background: $blue-color
+							a
+								color: $default-color
+
+						a
+							display: inline
+							color: $default-color
+						ul
+							position: static
+							padding-top: 0
+							margin: 0
+							background: $blue-color
+							li
+								&:not(:last-child)
+									border-bottom: 0px
+								&:hover
+									background:  rgba(0,0,0,0.9)
+
+			.nav-btn
+				display: block
+				transition: 1s
+				img
+					width: 45px
+			.logo
+				width: 130px
+	header
+		#big-slider
+			&.owl-theme
+				.owl-dots
+					width: 100%
+					background: rgba(0,0,0,0.8)
+					text-align: center
+					bottom: 0
+					top: inherit
+					right: inherit
+			.item
+				p
+					font-size: 32px
+					left: 20px
+		.sub-slogan
+			padding: 18px 20px
+			span
+				font-size: 15px
+			button
+				padding: 6px 15px
+				font-size: 10px
+				margin-left: 8px
+	.content
+		.article-container
+			.article-box
+				width: 50%
+		.hire-chiller
+			justify-content: space-between
+			h4
+				display: none
+		.testimonials
+			.human-container
+				.human-box
+					width: calc(100%/2)
+					.wrap-photo
+						.human-name
+							display: none
+						.hidden-popap
+							transition: 0.5s
+							&:hover
+								opacity: 1
+								transition: 0.5s
+		.about-chiller
+			.about-container
+				display: flex
+				flex-direction: column
+				#small-slider
+					width: 100%
+				.chat-tabs
+					width: 100%
+		.chat-btn
+			display: none
+		.order-now
+			.order-container
+				.text-block
+					.left-text
+						font-size: 41px
+						line-height: 14px
+					.right-text
+						font-size: 26px
+						line-height: 22px
+			.order-info
+				justify-content: center
+				button
+					width: 120px
+					height: 28px
+					line-height: 17px
+					font-size: 12px
+				span
+					font-size: 16px
+					line-height: 30px
+	footer
+		flex-wrap: wrap
+		.wrap-btn
+			flex-basis: 30%
+			button
+				width: 111px
+				height: 25px
+		span
+			flex-basis: 70%
+			text-align: right
+			font-size: 13px
+
+		ul
+			flex-basis: 100%
+			text-align: center
+			li
+				padding: 10px 0
+				margin-left: 0px
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.top-block
+		.distribut-block
+			.distribut-info
+				padding: 0
+				span
+					&:first-child
+						display: none!important
+			.distribut-change
+				padding: 0
+				a
+					display: none
+				.change-btn
+					display: block
+					margin: 0 auto
+			div
+				width: 48%
+				text-align: center
+		.nav-block
+			padding: 0 10px
+
+	header
+		#big-slider
+			.item
+				p
+					font-size: 22px
+					left: 10px
+		.sub-slogan
+			height: 80px
+			padding: 14px 10px
+			span
+				display: block
+				text-align: center
+			button
+				display: block
+				margin: 8px auto 0
+
+	.content
+		.article-container
+			.article-box
+				width: 100%
+		.hire-chiller
+			button
+				padding: 9px 19px
+				font-size: 14px
+			img
+				width: 110px
+		.testimonials
+			.human-container
+				.human-box
+					width: calc(100%)
+		.about-chiller
+			.about-container
+				.chat-tabs
+					&:after
+						right: 10px
+						top: -5px
+			.chat-btn
+				display: none
+		.order-now
+			.order-container
+				.text-block
+					height: 100%
+					text-align: center
+					display: block
+					span
+						display: block
+						&:nth-child(1)
+							padding: 20px 0 0 10px
+							font-size: 35px
+							line-height: 1
+						&:nth-child(2)
+							font-size: 20px
+	footer
+		padding: 0
+		.wrap-btn
+			flex-basis: 100%
+			text-align: center
+			button
+				width: 115px
+				height: 25px
+
+		span
+			order: 3
+			flex-basis: 100%
+			text-align: center
+			font-size: 13px
+
+		ul
+			order: 2
+			flex-basis: 100%
+			text-align: center
+			li
+				transition: 0.6s
+				padding: 10px 0
+				&:hover
+					background: #2a2a2a
+					transition: 0.6s
+					a
+						text-decoration: underline
+				a
+					text-decoration: underline
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 769px)
+	.nav-block
+		nav
+			display: block!important
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/

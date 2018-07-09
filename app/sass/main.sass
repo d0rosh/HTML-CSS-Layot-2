@@ -1,0 +1,670 @@
+@import "reset"
+@import "fonts"
+@import "vars"
+
+body
+	height: 100%
+	position: relative
+
+.wrapper
+	overflow: hidden
+
+.loader
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background-color: rgba(0,0,0,0.9)
+	z-index: 1000
+	img
+		width: 74px
+		height: 74px
+		position: absolute
+		left: 50%
+		top: 50%
+		margin-left: -37px
+		margin-top: -37px 
+
+.change-distributor
+	position: fixed
+	z-index: 9999
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background: rgba(0,0,0,0.9)
+	display: none
+	.popap
+		width: 300px
+		height: 250px
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -125px
+		margin-left: -150px
+		background: $default-color
+		padding: 32px 12px
+		box-sizing: border-box
+		text-align: center
+		font-family: 'FuturaBold'
+		span
+			color: $light-black
+			padding-bottom: 20px
+			display: block
+		img
+			width: 30px
+			display: block
+			margin: 0 auto
+			padding-bottom: 20px
+		input
+			border: 2px solid $blue-color
+			height: 25px
+			outline: none
+			padding: 0 10px
+			font-family: 'FuturaBold'
+			&::placeholder
+				color: $blue-color
+		button
+			display: block
+			margin: 0 auto
+			color: $default-color
+			padding: 8px 15px
+			background: $blue-color
+			margin-top: 20px
+			font-family: 'FuturaBold'
+		.invalid-value
+			color: red
+			font-size: 12px
+			font-family: 'FuturaBold'
+			position: absolute
+			left: 75px
+			
+
+.wow
+	visibility: hidden
+
+.top-block
+	font-family: $default-fontf
+	color: $light-black
+	.distribut-block
+		padding: 0 30px
+		height: 41px
+		width: 100%
+		background: $default-color
+		div
+			display: inline-block
+			height: 100%
+			font-size: 16px
+			font-weight: 400
+			box-sizing: border-box
+		.distribut-info
+			box-sizing: border-box
+			border-right: 1px solid #f5f5f5
+			padding: 0 30px 0 0
+			span
+				padding-top: 12px
+				display: inline-block
+				&:last-child
+					padding: 12px 0 5px 13px
+					font-size: 14px
+					font-weight: 700
+					color: $blue-color
+					font-family: 'FuturaBold'
+					background-image: url(../img/icons/map-marker.svg)
+					background-position: 0px 10px
+					background-repeat: no-repeat
+		.distribut-change
+			padding: 0 0 0 30px
+			a
+				padding-top: 12px
+				display: block
+				background-image: url(../img/icons/right-arrow.svg)
+				background-position: right 16px
+				background-repeat: no-repeat
+				padding-right: 30px
+				color: $light-black
+				transition: 0.6s
+				&:hover
+					color: $blue-color
+					transition: 0.6s
+					padding-right: 40px
+			.change-btn
+				display: none
+				border: none
+				background: $blue-color
+				color: $default-color
+				border-radius: 8px
+				padding: 5px 10px
+
+	.nav-block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 90px
+		width: 100%
+		padding: 0 30px
+		background: #f5f5f5
+		box-sizing: border-box
+		&.fixed-menu
+			z-index: 99999
+			position: fixed
+			top: 0
+			left: 0
+		.nav-btn
+			display: none
+			z-index: 9999
+			cursor: pointer
+		.logo
+			width: 190px
+			img
+				max-width: 100%
+				min-width: 120px
+		nav
+			z-index: 100
+			height: 100%
+			ul
+				height: 100%
+				padding-top: 30px
+				box-sizing: border-box
+				li
+					position: relative
+					display: inline-block
+					text-align: center
+					padding: 9px 20px
+					border-radius: 15px
+					cursor: pointer
+					transition: 0.5s
+					&:hover
+						transition: 0.4s
+						a
+							color: $blue-color
+						ul
+							li
+								a
+									color: $light-black
+					ul
+						position: absolute
+						width: auto
+						height: auto	
+						left: 15px
+						top: 28px
+						background: $default-color
+						padding-top: 0px
+						display: none
+						z-index: 100
+						li
+							display: block
+							border-radius: 0px
+							&:not(:last-child)
+								border-bottom: 1px solid #f5f5f5
+							&:hover
+								background:  $blue-color
+								a
+									color: $default-color
+					a
+						font-size: 14px
+						transition: 0.5s
+						text-transform: uppercase
+						font-family: 'FuturaBold'
+						color: $light-black
+						display: block
+						&.active
+							border-bottom: 2px solid $blue-color
+							color: $blue-color
+							padding: 0
+						&.submenu
+							background-image: url('../img/icons/down-arrow.svg')
+							background-repeat: no-repeat
+							background-position: right 2px
+							padding: 0 15px
+
+header
+	#big-slider
+		width: 100%
+		height: auto
+		overflow: hidden
+		.item
+			position: relative
+			width: 100%
+			height: 100%
+			img
+				max-width: 100%
+			p
+				position: absolute
+				bottom: 0
+				left: 30px
+				font-size: 72px
+				font-weight: 700
+				font-family: 'FuturaBold'
+				color: $default-color
+				text-transform: uppercase
+
+		&.owl-theme
+			.owl-dots
+				position: absolute
+				top: 30px
+				right: 30px
+				.owl-dot
+					outline: none
+					span
+						background: $default-color
+					&.active
+						span
+							background: $blue-color
+	.sub-slogan
+		height: 75px
+		width: 100%
+		box-sizing: border-box
+		padding: 18px 30px
+		background: $default-color
+		span
+			font-size: 24px
+			font-family: $default-fontf
+			color: $light-black
+			font-weight: 400
+		button
+			border: none
+			text-transform: uppercase
+			color: $default-color
+			font-family: 'FuturaBold'
+			font-weight: 700
+			font-size: 17px
+			padding: 11px 25px
+			background: #43ceb8
+			border-radius: 20px
+			margin-left: 30px
+
+.content
+	.article-container
+		width: 100%
+		min-height: 300px
+		height: auto
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.article-box
+			height: 300px
+			width: 33.3%
+			box-sizing: border-box
+			padding: 30px
+			position: relative
+			&:nth-child(1)
+				background-color: #019fbc
+				background-image: url('../img/icons/beer-icon.svg')
+				background-repeat: no-repeat
+				background-position: 90% 30px
+			&:nth-child(2)
+				background-color: #56c0d3
+				background-image: url('../img/icons/lemon-icon.svg')
+				background-repeat: no-repeat
+				background-position: 90% 30px
+			&:nth-child(3)
+				background-color: #8ed5e2
+				background-image: url('../img/icons/snowflake-icon.svg')
+				background-repeat: no-repeat
+				background-position: 90% 30px
+			h3
+				text-transform: uppercase
+				font-size: 28px
+				font-family: 'FuturaBold'
+				font-weight: 700
+				line-height: 28px
+				color: $default-color
+			p
+				font-size: 18px
+				line-height: 24px
+				font-family: $default-fontf
+				color: $default-color
+				margin-top: 66px
+				font-weight: 400
+			button
+				padding: 12px 23px
+				background: $default-color
+				border-radius: 20px
+				border: none
+				color: $blue-color
+				text-transform: uppercase
+				font-size: 16px
+				font-family: 'FuturaBold'
+				position: absolute
+				right: 8%
+				bottom: 30px
+
+	.hire-chiller
+		display: flex
+		align-items: center
+		flex-direction: row
+		flex-wrap: wrap
+		min-height: 111px
+		width: 100%
+		background: #f5f5f5
+		padding: 20px 30px
+		box-sizing: border-box
+		h4
+			font-size: 20px
+			font-family: 'FuturaBold'
+			font-weight: 700
+			text-transform: uppercase
+			line-height: 16px
+			span
+				color: $blue-color	
+		button
+			padding: 13px 25px
+			background: #14c1a5
+			border-radius: 20px
+			border: none
+			color: $default-color
+			text-transform: uppercase
+			font-size: 18px
+			font-family: 'FuturaBold'
+			transition: 0.6s
+			&:hover
+				background: #14C18D
+				transition: 0.6s
+	.testimonials
+		min-height: 470px
+		background: $default-color
+		border-bottom: 1px solid #f5f5f5
+		h3
+			padding: 30px
+			color: $light-black
+			font-size: 20px
+			font-family: 'FuturaBold'
+			text-transform: uppercase
+			span
+				color: $blue-color
+		.human-container
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			.human-box
+				width: calc(100%/3)
+				.wrap-photo
+					position: relative
+					img
+						width: 100%
+					.human-position
+						height: 21%
+						position: absolute
+						width: 95%
+						bottom: 0
+						left: 0
+						background: #fff
+						color: $light-black
+						text-transform: uppercase
+						box-sizing: border-box
+						padding: 0 30px
+						display: flex
+						align-items: center
+						span
+							font-size: 14px
+							font-family: 'FuturaBold'
+					.human-name
+						position: absolute
+						bottom: 21%
+						left: 30px
+						height: 27%
+						width: auto
+						display: flex
+						align-items: flex-end
+						background-image: url(../img/icons/quote-icon.svg)
+						background-repeat: no-repeat
+						span
+							text-transform: uppercase
+							color: $default-color
+							font-size: 20px
+							font-family: 'FuturaBold'
+					.hidden-popap
+						z-index: 100
+						position: absolute
+						width: 100%
+						height: 100%
+						background: rgba(0,0,0,0.8)
+						top: 0
+						left: 0
+						display: flex
+						align-items: center
+						justify-content: center
+						opacity: 0
+						span
+							text-transform: uppercase
+							color: $default-color
+							font-size: 20px
+							font-family: 'FuturaBold'
+							padding: 40px
+							background-image: url(../img/icons/quote-icon.svg)
+							background-repeat: no-repeat
+				.human-comment
+					padding: 0 30px
+					box-sizing: border-box
+					width: 90%
+					span
+						font-size: 16px
+						color: $light-black
+						font-family: $default-fontf
+						line-height: 24px
+	.about-chiller
+		padding: 30px 0 60px 0
+		border-bottom: 1px solid #f5f5f5
+		box-sizing: border-box
+		width: 100%
+		position: relative
+		overflow: hidden
+		h3
+			padding: 0 0 30px 30px
+			color: $light-black
+			font-size: 20px
+			font-family: 'FuturaBold'
+			text-transform: uppercase
+			span
+				color: $blue-color
+		.about-container
+			overflow: hidden
+			display: flex
+			flex-direction: row
+			position: relative
+			width: 100%
+			#small-slider
+				width: 50%
+				height: auto
+				overflow: hidden
+				.item
+					width: 100%
+					height: 100%
+					position: relative
+					img
+						max-width: 100%
+					span
+						position: absolute
+						bottom: 0
+						left: 25px
+						line-height: 46px
+						color: $default-color
+						font-size: 55px 
+						font-family: 'FuturaBold'
+						text-transform: uppercase
+				&.owl-theme
+					.owl-dots
+						position: absolute
+						top: 30px
+						right: 30px
+						.owl-dot
+							outline: none
+							span
+								background: $default-color
+							&.active
+								span
+									background: $blue-color
+
+			.chat-tabs
+				width: 50%
+				height: auto
+				padding: 50px 6%
+				box-sizing: border-box
+				position: relative
+				&:after
+					content: ''
+					background-image: url('../img/icons/comment2-icon.svg')
+					background-repeat: no-repeat
+					background-position: center
+					box-shadow: 0 4px 2px -2px gray
+					border-radius: 50%
+					position: absolute
+					width: 53px
+					height: 53px
+					right: 30px
+					top: 30px
+					z-index: 200
+					cursor: pointer
+				.tabs
+					width: 100%
+					height: auto
+					ul
+						li
+							margin-right: 40px
+							display: inline-block
+							a
+								font-size: 14px
+								font-family: 'FuturaBold'
+								color: $light-black
+								text-transform: uppercase
+							&.active
+								a
+									border-bottom: 2px solid $blue-color
+					div
+						padding-top: 40px
+						font-family: $default-fontf
+						h5
+							font-size: 24px
+							line-height: 36px
+							font-weight: 400
+							color: $light-black
+						p
+							font-size: 18px
+							line-height: 24px
+							padding-top: 50px
+						button
+							border: none
+							margin-top: 55px
+							padding: 10px 22px
+							background: $blue-color
+							border-radius: 20px
+							color: $default-color
+							text-transform: uppercase
+							font-family: 'FuturaBold'
+		.chat-btn
+			cursor: pointer
+			position: absolute
+			right: 30px
+			top: 67px
+			text-transform: uppercase
+			color: $default-color
+			font-size: 14px
+			font-family: 'FuturaBold'
+			padding: 6px 18px 6px 50px
+			text-align: right
+			background: $light-black
+			border-radius: 20px
+			background-image: url('../img/icons/comment1-icon.svg')
+			background-repeat: no-repeat
+			background-position: 24px center
+
+	.order-now
+		height: auto
+		background: $default-color
+		border-bottom: 1px solid #f5f5f5
+		h3
+			padding: 30px
+			color: $light-black
+			font-size: 20px
+			font-family: 'FuturaBold'
+			text-transform: uppercase
+			span
+				color: $blue-color
+		.order-container
+			position: relative
+			width: 100%
+			height: 100%
+			img
+				width: 100%
+			.text-block
+				width: 100%
+				padding: 0 30px
+				color: $default-color
+				text-transform: uppercase
+				box-sizing: border-box
+				position: absolute
+				left: 0
+				bottom: 0
+				display: flex
+				justify-content: space-between
+				font-family: 'FuturaBold'
+				.left-text
+					font-size: 74px
+					line-height: 1px
+				.right-text
+					font-size: 26px
+					line-height: 22px
+		.order-info
+			padding: 30px
+			background: $default-color
+			display: flex
+			justify-content: space-between
+			align-content: center
+			flex-wrap: wrap;
+			button
+				width: 200px
+				height: 46px
+				line-height: 29px
+				color: $default-color
+				border-radius: 20px
+				background: #14c1a5
+				text-transform: uppercase
+				font-family: 'FuturaBold'
+				font-size: 19px
+			span
+				font-family: $default-fontf
+				color: $light-black
+				font-size: 24px
+				line-height: 47px
+
+footer
+	background: #f5f5f5
+	padding: 15px 30px
+	display: flex
+	justify-content: space-between
+	align-content: center
+	font-size: 14px
+	.wrap-btn
+		button
+			width: 131px
+			height: 30px
+			text-transform: uppercase
+			color: #aaa
+			background: $default-color
+			border-radius: 16px
+			font-family: 'FuturaBold'
+			margin-top: 7px
+			transition: 0.6s
+			&:hover
+				background: #2a2a2a
+				color: $default-color
+				transition: 0.6s
+	span
+		color: #a9a9a9
+		line-height: 38px
+		margin-left: 160px
+	ul
+		margin-top: 10px
+		li
+			display: inline-block
+			margin-left: 20px
+			a
+				color: #a9a9a9
+			&:hover
+				a
+					color: $blue-color	
+
+
+@import 'media'
